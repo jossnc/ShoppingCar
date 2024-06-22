@@ -2,7 +2,9 @@
 import './Products.css';
 import { AddToCartIcon } from "./icons.jsx";
 
-export function Products({ products }) {
+const Products = ({ products }) => {
+    console.log('Productos en el Componente Products:', products); // Agrega esta línea
+
     return (
         <main className='products'>
             <ul>
@@ -16,11 +18,9 @@ export function Products({ products }) {
                         </div>
                         <div>
                             <button>
-                                {<AddToCartIcon />}
+                                <AddToCartIcon />
                             </button>
                         </div>
-
-
                     </li>
                 ))}
             </ul>
@@ -28,5 +28,4 @@ export function Products({ products }) {
     )
 }
 
-export default Products;
-
+export default Products; // Asegúrate de que esta línea esté presente
